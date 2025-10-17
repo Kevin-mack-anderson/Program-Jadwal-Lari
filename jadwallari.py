@@ -5,6 +5,22 @@ def pembuatan_jadwal_lari():
             print('=' *35)
             print('Halo Pengguna, aku adalah program yang akan membantu kamu \n' \
             'membuat jadwal latihan. ><')
+        # Input session
+def pertanyaan():
+            pertanyaan_1 = input('Sudah berapa lama kamu latihan? : [1-3, lainnya]').lower()
+            pertanyaan_2 = input('Berapa kali kamu latihan dalam seminggu? [2x, 4x, lainnya]').lower()
+            pertanyaan_3 = input('kesibukan apa selain berlari? [Pekerja, Mahasiswa, Pelajar, lainnya]').lower()
+            pertanyaan_4 = input('Apa yang ingin kamu capai? [Marathon, Halfmarathon, 10k, 5k, Memperbaiki jadwal latihan]').lower()
+        # Return
+            return {
+                    'lama_latihan' : pertanyaan_1,
+                    'latihan_seminggu' : pertanyaan_2,
+                    'jenis_kesibukan' : pertanyaan_3,
+                    'goals' : pertanyaan_4
+            }
+data_user = pertanyaan
+        
+        
         # Data setion
 import re
 def klasifikasi(teks):
@@ -34,14 +50,9 @@ def klasifikasi(teks):
                                 'angka':angka,
                                 'satuan':satuan,
                                 'total_bulan':total_bulan
-                        }
+                        }  
+                        return hasil
 
-        # Input session
-def pertanyaan():
-            pertanyaan_1 = input('Sudah berapa lama kamu latihan? : [1-3, lainnya]').lower()
-            pertanyaan_2 = input('Berapa kali kamu latihan dalam seminggu? [2x, 4x, lainnya]').lower()
-            pertanyaan_3 = input('kesibukan apa selain berlari? [Pekerja, Mahasiswa, Pelajar, lainnya]').lower()
-            pertanyaan_4 = input('Apa yang ingin kamu capai? [Marathon, Halfmarathon, 10k, 5k, Memperbaiki jadwal latihan]').lower()
         # pengkondisian
 while True:
         jawaban = input('Apakah kamu ingin melanjutkan (iya/tidak)\n'
@@ -55,5 +66,5 @@ while True:
             print('Aku Rasa.. Kamu memasukan input yang salah...')
             break
         
-                
+     
 pembuatan_jadwal_lari()
